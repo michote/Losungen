@@ -1,26 +1,130 @@
-/* 
-    You can modify the Onyx theme by adding variable and rule overrides to this
-    file.  To enable theming, follow these steps:
-
-    1. In debug.html, uncomment the line referencing "less-<version number>.min.js".
-    2. In package.js, change "$lib/onyx" to "$lib/onyx/source".
-    3. Also in package.js, add "Theme.less" (this file).
-    4. Add variable and rule overrides below.
-
-    See [https://github.com/enyojs/enyo/wiki/UI-Theming] for more information.
-*/
-
 
 /* Onyx default variable definitions: */
 @import "../lib/onyx/css/onyx-variables.less";
+/* --------------------------------------- */
 
-/* Place your Onyx variable overrides here -------------------- */
+/* Fonts */
+@onyx-font-size-small: 0.875rem;
+@onyx-font-size-medium: 1rem;
+@onyx-font-size-large: 1.25rem;
 
-/* ------------------------------------- end variable overrides */
+/* Padding */
+@onyx-button-padding-lr: 1.125rem;
+@onyx-button-padding-tb: 0.375rem;
+@onyx-tabbutton-padding-lr: 2.125;
+@onyx-tabbutton-padding-tb: 0.5rem;
 
+/* Icon Sizes */
+@onyx-icon-size: 2.26rem;
+@onyx-togglebutton-border-radius: 1rem;
+
+/* --------------------------------------- */
 /* Onyx rule definitions: */
 @import "../lib/onyx/css/onyx-rules.less";
+/* --------------------------------------- */
 
-/* Place your Onyx rule overrides here ------------------------ */
+.onyx-icon, .onyx-icon-toggle {
+    background-size: cover;
+}
 
-/* ----------------------------------------- end rule overrides */
+.onyx-datepicker-month {
+    min-width: 5rem;
+}
+.onyx-datepicker-day {
+    min-width: 5rem;
+}
+.onyx-datepicker-year {
+    min-width: 5rem;
+}
+
+.onyx-button {
+    padding: .625rem .25em;
+    font-size: 1rem;
+    border-radius: .25rem;
+    border: .1875rem solid #040404;
+    background-image: -webkit-gradient(linear,center top,center bottom,from(#3F3F3F),to(#252525));
+    color: #f7f7f7;
+    box-shadow: 0 0 .375rem #808080;
+}
+
+.onyx-button.active,
+.onyx-button.pressed,
+.onyx-button:active:hover:not([disabled])  {
+    background-color: #8bba3d;
+    border-radius: .25rem;
+    border: .1875rem solid #040404;
+    color: #070707;
+    box-shadow: 0 0 .375rem #808080;
+}
+
+.onyx-picker-decorator .onyx-button {
+    padding: .625rem 1rem;
+    min-width: 4rem;
+}
+
+.onyx-picker {
+    background: black;
+    border: .0625rem solid #121212;
+}
+
+.onyx-picker .onyx-menu-item {
+    min-height: 1.5rem;
+    border-top: .0625rem solid rgba(250,250,250,0.5);
+    background-color: black;
+    color: rgba(250,250,250,0.5);
+}
+
+.onyx-picker .onyx-menu-item.selected, .onyx-picker .onyx-menu-item.active, .onyx-picker .onyx-menu-item:active:hover {
+    color: white;
+    background-image: -webkit-gradient(linear,center top,center bottom,from(#3F3F3F),to(#252525));
+    box-shadow: inset 0 .0625rem .25rem rgba(0,0,0,0.3);
+    border-top: .0625rem solid rgba(250,250,250,0.5);
+}
+
+.onyx-toolbar-inline > * {
+    margin: 0 .375rem 0;
+}
+
+.onyx-menu-item {
+    padding: .625rem;
+}
+
+/* ToggleButton.css */
+.onyx-toggle-button {
+    height: 2rem;
+    line-height: 2rem;
+    min-width: 4rem;
+    box-shadow: inset 0 .0625rem .1875rem rgba(0,0,0,0.4);
+}
+
+.onyx-toggle-button-knob {
+    width: 1.875rem;
+    height: 1.875rem;
+    margin: .0625rem;
+}
+
+.onyx-toggle-button .onyx-toggle-button-knob {
+    box-shadow: -.0625rem 0 .25rem rgba(0,0,0,0.35), inset 0 -.0625rem 0 rgba(0,0,0,0.4);
+}
+
+.onyx-toggle-button.off .onyx-toggle-button-knob {
+    box-shadow: .0625rem 0 .25rem rgba(0,0,0,0.35), inset 0 -.0625rem 0 rgba(0,0,0,0.4);
+}
+
+.onyx-toggle-content {
+    min-width: 2rem;
+    padding: 0 .375rem;
+}
+
+/* ### Scrollbar ### */
+.enyo-thumb {
+    border-radius: .25rem;
+    background: #fff;
+    border: none;
+    opacity: 0.75;
+}
+
+.enyo-vthumb {
+    right: .125rem;
+    width: .25rem;
+}

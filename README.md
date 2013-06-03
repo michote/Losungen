@@ -1,6 +1,2 @@
-bootplate
-=========
-
-Application template for packaged Enyo
-
-Refer to the [Wiki](https://github.com/enyojs/enyo/wiki/Bootplate) for how to get started.
+![Logo](https://github.com/michote/MySongBook/raw/master/icon.png "Logo") Losungen
+==========
